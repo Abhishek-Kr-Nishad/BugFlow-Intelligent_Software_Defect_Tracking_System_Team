@@ -19,3 +19,19 @@ def test_generate_defect_report():
     assert "BUGFLOW ANALYTICS REPORT" in report
     assert "Total Defects" in report
     assert "High: 1" in report
+
+def test_calculate_defect_metrics():
+    from analytics.metrics import calculate_defect_metrics
+
+    defects = [
+        {"status": "open", "severity": "High"},
+        {"status": "resolved", "severity": "Medium"},
+        {"status": "open", "severity": "Low"}
+    ]
+
+    metrics = calculate_defect_metrics(defects)
+
+    assert metrics["total_defects"] == 3
+    assert metrics["open_defects"] == 2
+    assert metrics["resolved_defects"] == 1
+    assert metrics["resolution_rate"] == 33.33
