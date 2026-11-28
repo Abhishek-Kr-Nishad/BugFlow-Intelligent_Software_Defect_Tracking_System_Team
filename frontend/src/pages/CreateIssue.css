@@ -1,0 +1,329 @@
+
+/* ================================
+   Create Issue Page
+================================ */
+
+.create-issue-content {
+  width: 100%;
+  min-width: 0;
+  color: #25243a;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.create-issue-content * {
+  box-sizing: border-box;
+}
+
+/* ================================
+   Page Heading
+================================ */
+
+.create-issue-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.create-issue-heading p {
+  margin: 10px 0 0;
+  color: #858198;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.create-back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #7c3aed;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.create-back-link:hover {
+  color: #5b21b6;
+}
+
+/* ================================
+   Main Form Card
+================================ */
+
+.create-issue-form {
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #eeedf5;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(30, 25, 60, 0.04);
+}
+
+/* ================================
+   Form Sections
+================================ */
+
+.form-section {
+  margin-bottom: 28px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #eeedf5;
+}
+
+.form-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+
+.form-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  border-radius: 12px;
+  background: #f0e8ff;
+  color: #7c3aed;
+  font-size: 21px;
+}
+
+.form-section-heading h2 {
+  margin: 0 0 5px;
+  color: #292541;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.form-section-heading p {
+  margin: 0;
+  color: #9995aa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================================
+   Form Fields
+================================ */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  color: #514b67;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  border: 1px solid #e5e0f2;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #292541;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.09);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.7;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa6b9;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+/* File Upload */
+
+.form-group input[type="file"] {
+  min-height: auto;
+  padding: 12px;
+  background: #faf9fd;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #f0e8ff;
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.attachment-selected {
+  margin: 0;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ================================
+   Two Column Fields
+================================ */
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* ================================
+   Form Actions
+================================ */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cancel-button,
+.submit-issue-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cancel-button {
+  border: 1px solid #e5e0f2;
+  background: #ffffff;
+  color: #625c76;
+}
+
+.cancel-button:hover {
+  background: #f8f7fc;
+}
+
+.submit-issue-button {
+  border: none;
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.submit-issue-button:hover {
+  background: #6d28d9;
+  transform: translateY(-1px);
+}
+
+/* ================================
+   Demo Note
+================================ */
+
+.create-issue-demo-note {
+  margin: 20px 0 0;
+  color: #aaa6b9;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 900px) {
+  .create-issue-form {
+    padding: 25px;
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 600px) {
+  .create-issue-form {
+    padding: 19px;
+    border-radius: 12px;
+  }
+
+  .form-section {
+    margin-bottom: 23px;
+    padding-bottom: 20px;
+  }
+
+  .form-section-heading {
+    gap: 10px;
+  }
+
+  .form-section-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 18px;
+  }
+
+  .form-section-heading h2 {
+    font-size: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .create-issue-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 12px;
+  }
+}
